@@ -6,7 +6,7 @@
     box-sizing: border-box;
     color: #111111;
     font-family: "Montserrat";
-    transition: 1s;
+    transition: .5s;
 }
 
 .container{

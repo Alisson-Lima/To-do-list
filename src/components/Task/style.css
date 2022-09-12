@@ -5,11 +5,51 @@ body .container .tasks .task{
     height: 32px;
 }
 
-body .container .tasks .task p{
+body .container .tasks .task .checkLabel{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* MAKING CHECK CUSTOMIZATION */
+body .container .tasks .task .checkLabel input{
+    display: none;
+}
+
+body .container .tasks .task .checkLabel .checkMarker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background-color: #ECECEC;
+    margin-right: 12px;
+}
+body .container .tasks .task .checkLabel .checkMarker svg{
+    position: relative;
+    left: -.5px;
+    bottom: -.5px;
+    opacity: 0;
+}
+body .container .tasks .task .checkLabel input:checked ~ .checkMarker{
+    background-color: #74FC68;
+}
+body .container .tasks .task .checkLabel input:checked ~ .checkMarker svg{
+    opacity: 1;
+}
+
+body .container .tasks .task .checkLabel input:checked ~ p{
+    color: #AAAAAA;
+    text-decoration: line-through;
+}
+
+/* CHECK LABEL */
+body .container .tasks .task .checkLabel p{
     font-size: 1.12rem;
 }
 body .container .tasks .task .deleteTask{
-    /* display: none; */
+    display: none;
     position: absolute;
     border: transparent;
     background-color: transparent;

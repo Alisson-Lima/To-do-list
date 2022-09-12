@@ -4,7 +4,9 @@ export function Task(props){
         <div className="task">
             <label htmlFor="check" className="checkLabel">
                 <input type="checkbox" id="check"/>
-                <span className="checkMarker"></span>
+                <span className="checkMarker">
+                    <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 6.5L6.5 11L15.5 2" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
                 <p>{props.activity}</p>
             </label>
             <button className="deleteTask">
