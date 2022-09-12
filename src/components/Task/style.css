@@ -1,0 +1,19 @@
+body .container .tasks .task{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+
+body .container .tasks .task p{
+    font-size: 1.12rem;
+}
+body .container .tasks .task .deleteTask{
+    /* display: none; */
+    position: absolute;
+    border: transparent;
+    background-color: transparent;
+    right: 0;
+    padding: 5px;
+    cursor: pointer;
+}

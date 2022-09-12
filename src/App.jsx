@@ -1,5 +1,5 @@
 import {Task} from "./components/Task/"
-
+import "./app.css"
 function App() {
 
   return (
@@ -11,13 +11,17 @@ function App() {
         </button>
       </header>
       <form>
-        <input type="text" className="addTask" />
-        <button type="submit" onClick={(e) => e.preventDefault()}>
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 10.6H20.5M10.6 20.5V1.5" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
-        </button>
+        <h3>Digite sua tarefa</h3>
+        <div className="alignInputs">
+          <input type="text" className="insertTask" placeholder="Lavar a louça..."/>
+          <button type="submit" className="addTask" onClick={(e) => e.preventDefault()}>
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 10.6H20.5M10.6 20.5V1.5" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
+          </button>
+        </div>
       </form>
       <div className="tasks">
-        <Task />
+        <h3>Tarefas do dia:</h3>
+        <Task activity="Arrumar o quarto"/>
       </div>
     </div>
   )

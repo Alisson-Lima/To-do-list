@@ -1,0 +1,78 @@
+body .container header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+
+body .container header button{
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.black-mode .container header button svg{
+    fill: #74FC68;
+}
+
+.black-mode .container header button svg path{
+    stroke: #74FC68;
+}
+
+/* INSERT TASKS SECTION */
+body .container form{
+    margin-bottom: 48px;
+}
+body .container form .alignInputs{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+body .container form h3{
+    margin-bottom: 16px;
+    font-size: 1.12rem;
+    font-weight: 600;
+}
+
+/* INPUT INSERT TASK */
+body .container form .insertTask{
+    width: calc(100% - 82px);
+    height: 62px;
+    border-radius: 6px;
+    border: transparent;
+    background-color: #ECECEC;
+    padding: 16px 32px;
+    font-size: 1.12rem;
+    font-weight: 600;
+    margin-right: 12px;
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10); */
+}
+
+body .container form .insertTask::placeholder{
+    color: #CFCFCF;
+}
+
+.black-mode .container form .insertTask{
+    background-color: #16191E;
+}
+.black-mode .container form .insertTask::placeholder{
+    color: #2F3339;
+}
+
+/* INPUT ADD TASK */
+body .container form .addTask{
+    width: 70px;
+    height: 62px;
+    background-color: #74FC68;
+    border: transparent;
+    border-radius: 6px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* TASKS SECTION */
+body .container .tasks h3{
+    margin-bottom: 28px;
+}
