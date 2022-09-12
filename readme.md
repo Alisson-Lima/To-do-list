@@ -1,0 +1,1 @@
+This is a simple project to make a useful to-do list and pratice my habilities in react
