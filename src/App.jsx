@@ -23,9 +23,13 @@ function App() {
   function addTask(e){
     e.preventDefault()
     const tarefa = document.querySelector(".insertTask")
-    // setTarefas(tarefa.value)
-    add(tarefa.value)
-    tarefa.value = ""
+    if(tarefa.value == ""){
+      return
+    }else{
+      // setTarefas(tarefa.value)
+      add(tarefa.value)
+      tarefa.value = ""
+    }
   }
   function turnMode(){
     document.querySelector("body").classList.toggle("black-mode")
