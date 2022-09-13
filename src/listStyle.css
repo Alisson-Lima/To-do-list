@@ -55,6 +55,9 @@ body .container .tasks .task .checkLabel input:checked ~ p{
 }
 
 /* CHECK LABEL */
+body .container .tasks .task:hover .deleteTask{
+    display:block;
+}
 body .container .tasks .task .checkLabel p{
     font-size: 1.12rem;
 }
@@ -64,6 +67,13 @@ body .container .tasks .task .checkLabel p{
 }
 .black-mode .container .tasks .task .checkLabel p:hover{
     color: #e4e4e4;
+}
+
+body .container .tasks .task .deleteTask svg path{
+    stroke: #AAAAAA;
+}
+.black-mode .container .tasks .task .deleteTask svg path{
+    stroke: #2F3339;
 }
 body .container .tasks .task .deleteTask{
     display: none;
