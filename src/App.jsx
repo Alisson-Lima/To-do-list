@@ -1,6 +1,6 @@
 import {Task} from "./components/Task/"
 import "./app.css"
-import "./style.css"
+import "./listStyle.css"
 // import { createElement, useState } from "react"
 function App() {
   // const [tarefas, setTarefas] = useState([])

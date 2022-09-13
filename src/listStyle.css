@@ -58,8 +58,12 @@ body .container .tasks .task .checkLabel input:checked ~ p{
 body .container .tasks .task .checkLabel p{
     font-size: 1.12rem;
 }
+
 .black-mode .container .tasks .task .checkLabel p{
     color: #AFAFAF;
+}
+.black-mode .container .tasks .task .checkLabel p:hover{
+    color: #e4e4e4;
 }
 body .container .tasks .task .deleteTask{
     display: none;
