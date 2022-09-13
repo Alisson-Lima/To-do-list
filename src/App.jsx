@@ -22,6 +22,7 @@ function App() {
       <div className="tasks">
         <h3>Tarefas do dia:</h3>
         <Task activity="Arrumar o quarto"/>
+        <Task activity="Lavar a louça"/>
       </div>
     </div>
   )
