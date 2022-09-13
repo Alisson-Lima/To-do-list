@@ -25,5 +25,9 @@ h1{
 }
 
 .black-mode{
+    background-color: #0A0C0F;
+}
+
+.black-mode h1, .black-mode h3, .black-mode p{
     color: #F6F6F6;
 }
