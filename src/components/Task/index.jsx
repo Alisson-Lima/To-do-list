@@ -1,5 +1,8 @@
 // import "./style.css"
 export function Task({activity}){
+    function alerta(){
+        document.querySelector("body").style.background = "green"
+    }
     return(
         <div className="task">
             <label className="checkLabel">
