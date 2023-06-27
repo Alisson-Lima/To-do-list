@@ -13,11 +13,11 @@ body .container header button{
 }
 
 .black-mode .container header button svg{
-    fill: #74FC68;
+    fill: #5B29E5;
 }
 
 .black-mode .container header button svg path{
-    stroke: #74FC68;
+    stroke: #5B29E5;
 }
 
 /* INSERT TASKS SECTION */
@@ -65,7 +65,7 @@ body .container form .insertTask::placeholder{
 body .container form .addTask{
     width: 70px;
     height: 62px;
-    background-color: #74FC68;
+    background-color: #5B29E5;
     border: transparent;
     border-radius: 6px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);

@@ -1,14 +1,40 @@
+@keyframes showTask {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body .container .tasks ul{
+    list-style: none;
+}
+body .container .tasks ul li{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
 body .container .tasks .task{
     position: relative;
     display: flex;
     align-items: center;
     height: 32px;
+    width: 100%;
+    margin-bottom: 8px;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: showTask 1s normal forwards;
 }
 
 body .container .tasks .task .checkLabel{
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     cursor: pointer;
+    width: 100%;
 }
 
 /* MAKING CHECK CUSTOMIZATION */
@@ -39,7 +65,7 @@ body .container .tasks .task .checkLabel .checkMarker svg{
     stroke: #0A0C0F;
 }
 body .container .tasks .task .checkLabel input:checked ~ .checkMarker{
-    background-color: #74FC68;
+    background: #5B29E5;
 }
 body .container .tasks .task .checkLabel input:checked ~ .checkMarker svg{
     opacity: 1;
@@ -54,10 +80,6 @@ body .container .tasks .task .checkLabel input:checked ~ p{
     text-decoration: line-through;
 }
 
-/* CHECK LABEL */
-/* body .container .tasks .task:hover .deleteTask{
-    display:block;
-} */
 body .container .tasks .task .checkLabel p{
     font-size: 1.12rem;
 }
@@ -75,13 +97,27 @@ body .container .tasks .task .deleteTask svg path{
 .black-mode .container .tasks .task .deleteTask svg path{
     stroke: #2F3339;
 }
-body .container .tasks .task .deleteTask{
-    display: none;
+
+/* Delete button costumization */
+
+body .container .tasks ul li .deleteTask{
+    display: block;
+    opacity: 0;
+    transition: .2s;
     position: absolute;
-    border: transparent;
-    background-color: transparent;
     right: 0;
-    padding: 5px;
-    cursor: pointer;
+    background-color: transparent;
+    border: transparent;    
     z-index: 5;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+body .container .tasks ul li .deleteTask svg path{
+    stroke: #FF3535;
+}
+
+body .container .tasks ul li:hover .deleteTask{
+    opacity: 1;
+    pointer-events: all;
 }
