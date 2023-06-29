@@ -46,7 +46,6 @@ body .container form .insertTask{
     font-size: 1.12rem;
     font-weight: 600;
     margin-right: 12px;
-    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10); */
 }
 
 body .container form .insertTask::placeholder{
@@ -79,3 +78,11 @@ body .container .tasks h3{
     margin-bottom: 28px;
 }
 
+@media screen and (max-width: 450px) {
+    body .container .tasks p{
+        display: block;
+        word-wrap: break-word;
+        max-width: 84%;
+        font-size: 14px;
+    }
+}

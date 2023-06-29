@@ -12,21 +12,26 @@ body .container .tasks ul li{
     position: relative;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     cursor: pointer;
     width: 100%;
+    margin-bottom: 16px;
 }
 
 body .container .tasks .task{
     position: relative;
     display: flex;
     align-items: center;
-    height: 32px;
     width: 100%;
-    margin-bottom: 8px;
     opacity: 0;
     transform: translateY(-10px);
     animation: showTask 1s normal forwards;
+
+}
+
+body .container .tasks .task p{
+    width: calc(100% - 64px);
+    word-wrap: break-word;
 }
 
 body .container .tasks .task .checkLabel{
@@ -43,11 +48,13 @@ body .container .tasks .task .checkLabel input{
 }
 
 body .container .tasks .task .checkLabel .checkMarker{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 24px;
-    height: 24px;
+    align-self: flex-start;
+    min-width: 24px;
+    min-height: 24px;
     background-color: #ECECEC;
     border-radius: 6px;
     margin-right: 12px;

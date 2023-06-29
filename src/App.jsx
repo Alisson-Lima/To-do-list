@@ -1,5 +1,5 @@
 // Hooks
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 // Components
 import {Task} from "./components/Task/"
@@ -7,6 +7,7 @@ import {Task} from "./components/Task/"
 // Styles
 import "./app.css"
 import "./listStyle.css"
+import Message from "./components/Message"
 
 function App() {
 
@@ -17,26 +18,32 @@ function App() {
     "Estudar React",
     "Visitar https://alissondofront.vercel.app"
   ])
+  const [showMessage, setShowMessage] = useState(false)
+  const [msg, setMsg] = useState()
 
   const handleAddTaskt = e => {
     e.preventDefault()
 
     // Validating task
     if(task.trim() === ""){
-      // message
+      setMsg(["Digite uma tarefa antes de adicionar!", false])
+      setShowMessage(true)
       return
     }
 
     const alreadyExist = tasksArr.includes(task)
 
     if(alreadyExist){
-      // message
+      setMsg(["Atividade já existe na lista!", false])
+      setTask("")
+      setShowMessage(true)
       return
     }
 
     // add task
     setTasksArr([...tasksArr, task])
-
+    setMsg(["Atividade adicionada com sucesso!", true])
+    setShowMessage(true)
     // clear inputs
     setTask("")
 
@@ -45,12 +52,20 @@ function App() {
   const handleRemoveTask = task => {
     const newTaskArr = tasksArr.filter( item => item != task)
     setTasksArr(newTaskArr)
+    setMsg(["Atividade excluída com sucesso", true])
+    setShowMessage(true)
   }
 
   const turnMode = () => {
     // change dark/light mode
     document.querySelector("body").classList.toggle("black-mode")
   }
+
+  useEffect(()=>{
+      setTimeout(()=>{
+        setShowMessage(false)
+      }, 4000)
+  }, [showMessage])
 
   return (
     <div className="container">
@@ -69,6 +84,11 @@ function App() {
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 10.6H20.5M10.6 20.5V1.5" stroke="white" strokeWidth="3" strokeLinecap="round"/></svg>
           </button>
         </div>
+        {
+          showMessage && (
+            <Message message={msg[0]} type={msg[1]}/>
+          )
+        }
       </form>
 
       <div className="tasks">
@@ -85,7 +105,7 @@ function App() {
                 </li>
               ))
             ):(
-              <li>Não há itens na lista</li>
+              <li><p>Não há itens na lista</p></li>
             )
           }
           

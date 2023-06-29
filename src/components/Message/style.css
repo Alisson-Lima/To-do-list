@@ -1,0 +1,21 @@
+p.msg{
+    display: block;
+    width: 100%;
+    padding: 16px 8px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+p.error{
+    color: rgb(201, 7, 7);
+    background: rgba(255, 0, 0, 0.562);
+    border: 1px solid red;
+}
+
+p.success{
+    color: rgb(32, 180, 32);
+    background: rgba(22, 184, 22, 0.562);
+    border: 1px solid green;
+}
