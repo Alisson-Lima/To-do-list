@@ -11,4 +11,4 @@ That projet was created for testing my react habilities, it's a simple project y
 
 ## Collaboration
 
-If you have an idea to update the project to do it better and more complexity, fell free to add yours contributions in my project, just chat me before your pull request.
+If you have an idea to update the project to do it better and more complexity, fell free to add yours contributions in my project!
