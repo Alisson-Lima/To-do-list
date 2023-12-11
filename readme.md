@@ -7,7 +7,7 @@ That projet was created for testing my react habilities, it's a simple project y
 - Clone my repo in your vs code
 - Install dependences
 - Type in your console: npm run dev
-- Explore the projects
+- Explore the project
 
 ## Collaboration
 
